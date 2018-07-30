@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#5988ff">
+
+            <TextView
+                android:id="@+id/commentPage_title_text"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="A"
+                android:gravity="center_horizontal"
+                android:textColor="#f7f7f7"
+                android:textSize="20dp" />
+            <RelativeLayout
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/add_comment_text"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:textColor="#f7f7f7"
+                    android:text="评论"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/comment_postContent_text"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="帖子内容"
+            android:textColor="#656565"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"></LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:gravity="center_vertical|left"
+                android:text="评论" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#656565"></LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/comment_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="517dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

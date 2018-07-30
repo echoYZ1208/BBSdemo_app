@@ -1,0 +1,77 @@
+
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+/**
+ * 测试类。
+ */
+public class TestRent {
+	public static void main(String[] args) {	
+		//初始化车辆数据
+		MotoVehicle m1 = new Bus("京BK5543", "金杯", 16);
+		MotoVehicle m2 = new Bus("京BK5544", "金龙", 32);
+		MotoVehicle m3 = new Car("京BK5545", "宝马", "1");
+		MotoVehicle m4 = new Car("京BK5546", "别克", "2");
+		ArrayList<MotoVehicle> vehicles = new ArrayList<MotoVehicle>();
+		vehicles.add(m1);
+		vehicles.add(m2);
+		vehicles.add(m3);
+		vehicles.add(m4);
+		MotoVehicle v;
+		
+//		String no,brand,mtype,type;			
+//		int seatCount,days,rent;
+//		Car car;
+//		Bus bus;
+		Scanner input = new Scanner(System.in);		
+		System.out.println("欢迎您来到汽车租赁公司！");
+		System.out.println("序号\t汽车牌号\t汽车品牌\t座位数\t汽车类型");
+		for(int i=0; i<vehicles.size(); i++) {
+			v = vehicles.get(i);
+			if(v instanceof Bus) {
+				System.out.println(i+1 +"\t"+ v.getNo() +"\t"+ v.getBrand() +"\t"+ ((Bus) v).getSeatCount());
+			}
+			else {
+				System.out.println(i+1 +"\t"+ v.getNo() +"\t"+ v.getBrand() +"\t\t"+ ((Car) v).getType());
+			}
+		}
+		System.out.println("请输入您想租赁的序号：");
+		int num = input.nextInt();
+		System.out.println("请输入您想租赁的天数：");
+		int days = input.nextInt();
+		System.out.println("租赁费用为： " + );
+		
+//		System.out.print("请输入要租赁的天数：");
+//		days=input.nextInt();	
+//		System.out.print("请输入要租赁的汽车类型（1：轿车      2、客车）:");
+//		mtype = input.next();		
+//		if("1".equals(mtype)){
+//			System.out.print("请输入要租赁的汽车品牌（1、宝马    2、别克）:");
+//			brand=input.next();
+//			System.out.print("请输入轿车的型号 ");
+//			if("1".equals(brand))
+//				System.out.print("1、550i：");
+//			else
+//				System.out.print("2、商务舱GL8  3、林荫大道");
+//			type=input.next();
+//			no="京BK5543";//简单起见，直接指定汽车牌号
+//			System.out.println("分配给您的汽车牌号是:"+no);
+//			car =new Car(no,brand,type);
+//			rent=car.calRent(days);
+//		}
+//		else{
+//			System.out.print("请输入要租赁的客车品牌（1、金杯 2、金龙）:");
+//			brand=input.next();
+//			System.out.print("请输入客车的座位数:");
+//			seatCount=input.nextInt();
+//			no="京AU8769";//简单起见，直接指定汽车牌号
+//			System.out.println("分配给您的汽车牌号是:"+no);
+//			bus=new Bus(no,brand,seatCount);
+//			rent=bus.calRent(days);
+//		}		
+		//System.out.println("\n顾客您好！您需要支付的租赁费用是"+rent+"。");
+			
+
+	}
+}
